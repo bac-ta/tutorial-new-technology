@@ -1,0 +1,12 @@
+div.container button {
+  background-color: blue;
+  color: yellow;
+  border: none;
+  font-weight: bold;
+  border-radius: 2px;
+  //&:hover <=> button:hover, & sẽ reference tới cha gần nhất.
+  &:hover, &:active, &:focus {
+    background-color: yellow;
+    color: white;
+  }
+}
