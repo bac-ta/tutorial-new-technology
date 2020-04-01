@@ -1,0 +1,8 @@
+@mixin headline($size, $color: red) {
+  color: $color;
+  font-size: $size;
+}
+
+h1 {
+  @include headline(12px, blue);
+}
