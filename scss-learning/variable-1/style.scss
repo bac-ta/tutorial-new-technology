@@ -1,0 +1,16 @@
+//Đặt tên biến cho những biến lặp đi lặp lại nhiều lần, ten biến ở đây là $mau_vang
+$mau_vang: yellow;
+
+div.container button{
+  background-color: blue;
+  color: $mau_vang;
+  border: none;
+  font-weight: bold;
+  border-radius: 2px;
+//&:hover <=> button:hover, & sẽ reference tới cha gần nhất.
+&:hover, &:active, &:focus {
+  background-color: $mau_vang;
+  color: white;
+}
+
+}
