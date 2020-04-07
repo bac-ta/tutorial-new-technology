@@ -1,0 +1,6 @@
+app:
+  mysql:
+    host: localhost
+    user: root
+    password: Silencer&&55
+    database: express-crud

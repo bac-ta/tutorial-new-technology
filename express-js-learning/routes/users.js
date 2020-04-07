@@ -8,7 +8,7 @@ var requestTime = (req, res, next) => {
     next();
 };
 
-app.use(requestTime);
+router.use(requestTime);
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
