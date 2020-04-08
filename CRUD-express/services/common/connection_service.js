@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const ApplicationConfig = require("../../helper/fetching_application_config");
+const ApplicationConfig = require("../../helper/app_config");
 
 const MYSQL_ATTRIBUTES = ApplicationConfig.fetchAppConfig.app.mysql;
 

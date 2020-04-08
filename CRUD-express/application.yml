@@ -4,3 +4,7 @@ app:
     user: root
     password: Silencer&&55
     database: express-crud
+
+  auth:
+    token-secret: ZGltYWdlc2hhcmUtbGVnYWN5LWJhY2tlbmQtcHJvamVjdA==
+    token-expiration-msec: 360000
