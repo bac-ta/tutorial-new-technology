@@ -1,13 +1,13 @@
 const mysql = require('mysql');
-const ApplicationConfig = require("../../helper/app_config");
+const ApplicationConfig = require("./app_config");
 
 const MYSQL_ATTRIBUTES = ApplicationConfig.fetchAppConfig.app.mysql;
-
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
+    connectionLimit: parseInt(MYSQL_ATTRIBUTES.connectionLimit),
     host: MYSQL_ATTRIBUTES.host,
     user: MYSQL_ATTRIBUTES.user,
     password: MYSQL_ATTRIBUTES.password,
     database: MYSQL_ATTRIBUTES.database
 });
 
-module.exports = connection;
+module.exports = pool;

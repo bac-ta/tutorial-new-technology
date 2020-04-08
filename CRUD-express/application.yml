@@ -4,6 +4,8 @@ app:
     user: root
     password: Silencer&&55
     database: express-crud
+    connectionLimit: 10
+    queueLimit: 0
 
   auth:
     token-secret: ZGltYWdlc2hhcmUtbGVnYWN5LWJhY2tlbmQtcHJvamVjdA==

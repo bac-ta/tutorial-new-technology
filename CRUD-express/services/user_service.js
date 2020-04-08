@@ -1,4 +1,4 @@
-const connection = require("./common/connection_service");
+const connection = require("../helper/connection");
 
 const getUser = (id) => {
     connection.connect();
