@@ -6,12 +6,12 @@ const lodash = require('lodash');
 const AuthenticateService = require("../services/authenticate_service");
 const {authenticateValidate} = require("../validates/authenticate_validate");
 
-router.post('/', authenticateValidate('login'),  (req, res) => {
+router.post('/', authenticateValidate('login'),  async (req, res) => {
     const jsonBody = req.body;
     const password = jsonBody.password;
     const email = jsonBody.email;
 
-    const token =  AuthenticateService.login(email, password);
+    const token =  await AuthenticateService.login(email, password);
     console.log("token ");
     console.log(token);
 

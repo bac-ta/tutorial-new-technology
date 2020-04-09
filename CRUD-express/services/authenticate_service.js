@@ -1,52 +1,31 @@
-// Login and logout
+// Login
 const pool = require('../helper/connection');
-const AppMessage = require("../helper/app_message");
 const Util = require('../helper/util');
 const lodash = require('lodash');
 const JWTService = require("./jwt_service");
-const util = require('util');
 
 const login = async (email, password) => {
 
     if (lodash.isEmpty(password))
         return '';
 
-    const connectionAsync = util.promisify(pool.getConnection);
+    var queryUrl = "SELECT id, name, password, role FROM user WHERE email=" + "'" + email + "'";
+    var rows = await pool.query(queryUrl);
 
-    pool.getConnection((err, connection) => {
-        if (err) {
-            Util.logger.error(err);
-            throw new Error(AppMessage.DATABASE_ERROR);
-        }
-        Util.logger.info('connected as id ' + connection.threadId);
+    if (lodash.isEmpty(rows))
+        return '';
 
-        connection.query("SELECT id, name, password, role FROM user WHERE email=" + "'" + email + "'", (err, rows) => {
-            try {
-                if (err) {
-                    Util.logger.error(err);
-                    throw new Error(AppMessage.SYNTAX_ERROR);
-                }
+    const passwordStore = rows[0].password;
 
-                if (lodash.isEmpty(rows))
-                    return '';
+    if (!Util.comparePasswordSync(password, passwordStore))
+        return '';
 
-                const passwordStore = rows[0].password;
+    const id = rows[0].id;
+    const name = rows[0].name;
+    const role = rows[0].role;
 
-                if (!Util.comparePasswordSync(password, passwordStore))
-                    return '';
-
-                const id = rows[0].id;
-                const name = rows[0].name;
-                const role = rows[0].role;
-                //make jwt token
-                return JWTService.jwtGenerate(id, name, role);
-
-            } finally {
-                connection.release();
-            }
-
-        });
-    });
+    //make jwt token
+    return JWTService.jwtGenerate(id, name, role);
 
 };
 const AuthenticateService = {login};
