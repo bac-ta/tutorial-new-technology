@@ -1,15 +1,22 @@
-const connection = require("../helper/connection");
+const pool = require('../helper/connection');
+const lodash = require('lodash');
 
-const getUser = (id) => {
-    connection.connect();
-
-    connection.query('SELECT * FROM user WHERE id=' + id, (err, rows, fields) => {
-        if (err) throw err;
-        console.log(rows[0]);
-
-    });
-
-    connection.end();
+const getUser = async (id) => {
+    const rows = await pool.query('SELECT id, name, email, address, role FROM user WHERE id=?', id);
+    if (lodash.isEmpty(rows))
+        return {
+            user: {}
+        };
+    return {
+        user: {
+            id: rows[0].id,
+            name: rows[0].name,
+            email: rows[0].email,
+            address: rows[0].address
+        }
+    }
 };
 
-getUser(1);
+const UserService = {getUser};
+module.exports = UserService;
+

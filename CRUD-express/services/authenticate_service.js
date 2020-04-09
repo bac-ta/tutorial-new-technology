@@ -8,9 +8,8 @@ const login = async (email, password) => {
 
     if (lodash.isEmpty(password))
         return '';
-
-    var queryUrl = "SELECT id, name, password, role FROM user WHERE email=" + "'" + email + "'";
-    var rows = await pool.query(queryUrl);
+    let queryUrl = 'SELECT id, name, password, role FROM user WHERE email=?';
+    const rows = await pool.query(queryUrl, email);
 
     if (lodash.isEmpty(rows))
         return '';
@@ -25,7 +24,7 @@ const login = async (email, password) => {
     const role = rows[0].role;
 
     //make jwt token
-    return JWTService.jwtGenerate(id, name, role);
+    return JWTService.generateJwt(id, name, role);
 
 };
 const AuthenticateService = {login};

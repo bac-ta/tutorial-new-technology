@@ -3,7 +3,7 @@ const ApplicationConfig = require("../helper/app_config");
 
 const AUTH_ATTRIBUTE = ApplicationConfig.fetchAppConfig.app.auth;
 
-const jwtGenerate = (id, name, role) => {
+const generateJwt = (id, name, role) => {
     const timeSecondsNow = Math.floor(Date.now() / 1000);
     const tokenExpirationMsec = parseInt(AUTH_ATTRIBUTE.token_expiration_msec);
     const token = jwt.sign({
@@ -17,5 +17,12 @@ const jwtGenerate = (id, name, role) => {
     return token;
 };
 
-const JWTService = {jwtGenerate};
+
+const verifyJwt = async (req, res, next) => {
+    const token = req.header('Authorization').replace('Bearer ', '');
+    const info = jwt.verify(token, AUTH_ATTRIBUTE.token_secret);
+    console.log(info);
+};
+
+const JWTService = {generateJwt, verifyJwt};
 module.exports = JWTService;

@@ -8,6 +8,7 @@ const EMAIL_INVALID = 'Email invalid';
 const DATABASE_CONNECTION_LOST = 'Database connection was closed';
 const ER_CON_COUNT_ERROR = 'Database has too many connections';
 const ECONNREFUSED = 'Database connection was refused';
+const ID_INVALID = 'Id must be interger and > 0';
 
 const AppMessage = {
     DATABASE_ERROR,
@@ -19,6 +20,7 @@ const AppMessage = {
     EMAIL_INVALID,
     DATABASE_CONNECTION_LOST,
     ER_CON_COUNT_ERROR,
-    ECONNREFUSED
+    ECONNREFUSED,
+    ID_INVALID
 };
 module.exports = AppMessage;
