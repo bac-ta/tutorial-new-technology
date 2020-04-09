@@ -8,5 +8,5 @@ app:
     queueLimit: 0
 
   auth:
-    token-secret: ZGltYWdlc2hhcmUtbGVnYWN5LWJhY2tlbmQtcHJvamVjdA==
-    token-expiration-msec: 360000
+    token_secret: ZGltYWdlc2hhcmUtbGVnYWN5LWJhY2tlbmQtcHJvamVjdA==
+    token_expiration_msec: 360000

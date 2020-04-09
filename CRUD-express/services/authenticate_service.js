@@ -3,12 +3,15 @@ const pool = require('../helper/connection');
 const AppMessage = require("../helper/app_message");
 const Util = require('../helper/util');
 const lodash = require('lodash');
-const http = require('http');
+const JWTService = require("./jwt_service");
+const util = require('util');
 
-const login = (email, password) => {
+const login = async (email, password) => {
 
     if (lodash.isEmpty(password))
-        return false;
+        return '';
+
+    const connectionAsync = util.promisify(pool.getConnection);
 
     pool.getConnection((err, connection) => {
         if (err) {
@@ -17,7 +20,7 @@ const login = (email, password) => {
         }
         Util.logger.info('connected as id ' + connection.threadId);
 
-        connection.query("SELECT id, name, password FROM user WHERE email=" + "'" + email + "'", (err, rows) => {
+        connection.query("SELECT id, name, password, role FROM user WHERE email=" + "'" + email + "'", (err, rows) => {
             try {
                 if (err) {
                     Util.logger.error(err);
@@ -25,12 +28,18 @@ const login = (email, password) => {
                 }
 
                 if (lodash.isEmpty(rows))
-                    return false;
+                    return '';
 
                 const passwordStore = rows[0].password;
 
                 if (!Util.comparePasswordSync(password, passwordStore))
-                    return false;
+                    return '';
+
+                const id = rows[0].id;
+                const name = rows[0].name;
+                const role = rows[0].role;
+                //make jwt token
+                return JWTService.jwtGenerate(id, name, role);
 
             } finally {
                 connection.release();
@@ -38,6 +47,7 @@ const login = (email, password) => {
 
         });
     });
-    return true;
 
 };
+const AuthenticateService = {login};
+module.exports = AuthenticateService;
