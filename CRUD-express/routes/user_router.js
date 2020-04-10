@@ -8,6 +8,7 @@ const JWTService = require("../services/jwt_service");
 const Enum = require("../helper/enumeration");
 const {userValidate} = require("../validates/user_validate");
 const {validationResult} = require('express-validator');
+const Util = require('../helper/util');
 
 const createUser = router.post('/user', userValidate('createUser'), async (req, res) => {
     const errors = validationResult(req);
@@ -21,6 +22,7 @@ const createUser = router.post('/user', userValidate('createUser'), async (req, 
         await UserService.createUser(user);
         res.status(HttpStatus.OK).json({message: AppMessage.CREATE_USER_SUCCCESS});
     } catch (e) {
+        Util.logger.error(e);
         res.status(HttpStatus.BAD_REQUEST).json({message: AppMessage.CREATE_USER_FAILURE})
     }
 
