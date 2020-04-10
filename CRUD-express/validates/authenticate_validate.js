@@ -14,7 +14,5 @@ exports.authenticateValidate = (method) => {
             ];
             return checkConditions;
         }
-        case 'createUser': {
-        }
     }
 };

@@ -27,7 +27,11 @@ const logger = createLogger({
     ]
 });
 
+const getEnumKeyByValue = (object, value) => {
+    return Object.keys(object).find(key => object[key] === value);
+};
+
 const Util = {
-    hashPasswordSync, comparePasswordSync, logger
+    hashPasswordSync, comparePasswordSync, logger, getEnumKeyByValue
 };
 module.exports = Util;

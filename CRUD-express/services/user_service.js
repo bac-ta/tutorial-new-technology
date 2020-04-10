@@ -16,7 +16,16 @@ const getUser = async (id) => {
         }
     }
 };
+const createUser = async (user) => {
+    const name = user.name;
+    const address = user.address;
+    const email = user.email;
+    const password = user.password;
 
-const UserService = {getUser};
+    await pool.query('INSERT INTO user(name, address, email, password) VALUES (?,?,?,?)', [name, address, email, password]);
+
+};
+
+const UserService = {getUser, createUser};
 module.exports = UserService;
 

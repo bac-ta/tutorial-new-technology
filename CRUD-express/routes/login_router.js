@@ -11,8 +11,7 @@ router.post('/login', authenticateValidate('login'), async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(HttpStatus.BAD_REQUEST).json({
-            message: errors.array().pop().msg,
-            code: HttpStatus.BAD_REQUEST
+            message: errors.array().pop().msg
         });
     }
     const jsonBody = req.body;

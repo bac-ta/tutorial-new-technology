@@ -1,6 +1,5 @@
 const RoleType = Object.freeze({'MEMBER': 0, 'ADMIN': 1});
-
-const AppType = {
+const Enum = {
     RoleType
 };
-module.exports = AppType;
+module.exports = Enum;
