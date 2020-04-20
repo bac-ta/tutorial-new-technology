@@ -11,7 +11,7 @@ func FetchMysqlConfiguration() (string, string, string, string) {
 	mysqldb := beego.AppConfig.String("mysqldb")
 	return mysqluser, mysqlpass, mysqlurls, mysqldb
 }
-func FetchJwtConfiguration() (string) {
+func FetchJwtConfiguration() string {
 	secretKey := beego.AppConfig.String("secretKey")
 	return secretKey
 }
