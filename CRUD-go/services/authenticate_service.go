@@ -1,15 +1,14 @@
 package services
 
 import (
+	"../models"
 	"github.com/astaxie/beego/orm"
 )
 
-import "../models"
+func Login(email string, password string) models.User {
+	o := orm.NewOrm()
+	var user models.User
 
-func login(email string, password string) orm.QuerySeter {
-	orm := orm.NewOrm()
-	user := new(models.User)
-
-	query := orm.QueryTable(user).Filter("email", email).Filter("password", password)
-	return query
+	o.QueryTable(user).Filter("email", email).One(&user)
+	return user
 }

@@ -8,8 +8,9 @@ type User struct {
 	Id       int
 	Name     string
 	Address  string
-	Email    string
+	Email    string `orm:"unique"`
 	Password string
+	Role     string
 }
 
 func init() {

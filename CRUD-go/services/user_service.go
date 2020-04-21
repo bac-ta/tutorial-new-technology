@@ -1,21 +1,23 @@
 package services
 
 import (
+	"../models"
+	"../utils"
 	"fmt"
 	"github.com/astaxie/beego/orm"
 )
-import "../models"
 
-func registUser(user models.User) {
+func RegistUser(user models.User) (int64, error) {
 	orm := orm.NewOrm()
+	password := user.Password
+	//Hash
+	passwordHash := utils.HashPassword(password)
+	user.Password = passwordHash
 	id, err := orm.Insert(&user)
-	fmt.Println(id)
-	if err == nil {
-		fmt.Println(id)
-	}
+	return id, err
 }
 
-func getUserById(id int) {
+func GetUserById(id int) {
 	o := orm.NewOrm()
 	user := models.User{
 		Id: id,
@@ -32,7 +34,7 @@ func getUserById(id int) {
 	}
 }
 
-func getUsers() []*models.User {
+func GetUsers() []*models.User {
 	orm := orm.NewOrm()
 	var users []*models.User
 	orm.QueryTable(new(models.User)).All(&users)

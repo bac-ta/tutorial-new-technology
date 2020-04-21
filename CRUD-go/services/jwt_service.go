@@ -17,7 +17,7 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
-func makeJwt(id int, name string, role string) string {
+func MakeJwt(id int, name string, role string) string {
 	jwtKey := []byte(secretKey)
 	expirationTime := time.Now().Add(1 * time.Hour)
 
@@ -38,7 +38,7 @@ func makeJwt(id int, name string, role string) string {
 	return jwtToken
 }
 
-func verifyJwt(jwtToken string) bool {
+func VerifyJwt(jwtToken string) bool {
 
 	claims := &Claims{}
 
