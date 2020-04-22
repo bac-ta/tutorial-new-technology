@@ -3,33 +3,32 @@ package services
 import (
 	"../conf"
 	"../constant"
+	"../models/rest"
+	"encoding/json"
+	"fmt"
+	"github.com/astaxie/beego/context"
 	"github.com/astaxie/beego/logs"
 	"github.com/dgrijalva/jwt-go"
+	"net/http"
+	"strings"
 	"time"
 )
 
 var secretKey = conf.FetchJwtConfiguration()
 
-type Claims struct {
-	id   int    `json:"id"`
-	name string `json:"name"`
-	role string `json:"role"`
-	jwt.StandardClaims
-}
-
 func MakeJwt(id int, name string, role string) string {
 	jwtKey := []byte(secretKey)
-	expirationTime := time.Now().Add(1 * time.Hour)
+	expirationTime := time.Now().UTC().Add(1 * time.Hour).Unix()
+	issueAt := time.Now().UTC().Unix()
 
-	claims := &Claims{
-		id:   id,
-		name: name,
-		role: role,
-		StandardClaims: jwt.StandardClaims{
-			ExpiresAt: expirationTime.Unix(),
-		},
-	}
-	jwtToken, err := jwt.NewWithClaims(jwt.SigningMethodHS256, claims).SignedString(jwtKey)
+	jwtToken, err := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"sub":  id,
+		"name": name,
+		"role": role,
+		"iat":  issueAt,
+		"exp":  expirationTime,
+	}).SignedString(jwtKey)
+
 	if err != nil {
 		logs.Error(constant.JWT_MAKE_ERROR)
 		return ""
@@ -38,18 +37,50 @@ func MakeJwt(id int, name string, role string) string {
 	return jwtToken
 }
 
-func VerifyJwt(jwtToken string) bool {
+func JwtAuth(ctx *context.Context) {
+	ctx.Output.Header("Content-Type", "application/json")
+	uri := ctx.Input.URI()
+	if uri == "/api/login" {
+		return
+	}
+	accessToken := ctx.Input.Header("Authorization")
+	accessToken = strings.Replace(accessToken, "Bearer ", "", 1)
 
-	claims := &Claims{}
+	if accessToken == "" {
+		ctx.Output.SetStatus(http.StatusForbidden)
+		responseBody, err := json.Marshal(rest.APIMessage{http.StatusForbidden, constant.FORBIDEN})
+		ctx.Output.Body(responseBody)
+		if err != nil {
+			panic(err)
+		}
+	}
 
-	tkn, err := jwt.ParseWithClaims(jwtToken, claims, func(token *jwt.Token) (interface{}, error) {
-		return secretKey, nil
+	token, err := jwt.Parse(accessToken, func(token *jwt.Token) (interface{}, error) {
+		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
+			return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
+		}
+		return []byte(secretKey), nil
 	})
+
 	if err != nil {
-		return false
+		ctx.Output.SetStatus(http.StatusForbidden)
+		resBytes, err := json.Marshal(rest.APIMessage{http.StatusForbidden, constant.FORBIDEN})
+		ctx.Output.Body(resBytes)
+		if err != nil {
+			panic(err)
+		}
 	}
-	if !tkn.Valid {
-		return false
+
+	claims, ok := token.Claims.(jwt.MapClaims)
+
+	if ok && token.Valid && claims != nil {
+		return
+	} else {
+		ctx.Output.SetStatus(403)
+		resBody, err := json.Marshal(rest.APIMessage{http.StatusForbidden, ctx.Input.Header("Authorization")})
+		ctx.Output.Body(resBody)
+		if err != nil {
+			panic(err)
+		}
 	}
-	return true
 }

@@ -20,7 +20,7 @@ func (this *AuthenticateController) Login() {
 	json.Unmarshal(this.Ctx.Input.RequestBody, &user)
 	email := user.Email
 	password := user.Password
-	response := services.Login(email, password)
+	response := services.Login(email)
 	messageObj := rest.LoginMessage{}
 	if response.Id == 0 {
 		this.Ctx.ResponseWriter.WriteHeader(http.StatusBadRequest)
@@ -31,7 +31,7 @@ func (this *AuthenticateController) Login() {
 			messageObj.Message = constant.LOGIN_FAILURE
 		} else {
 			messageObj.Message = constant.LOGIN_SUCCESS
-			accessToken := services.MakeJwt(user.Id, user.Name, user.Role)
+			accessToken := services.MakeJwt(response.Id, response.Name, response.Role)
 			messageObj.AccessToken = accessToken
 		}
 	}

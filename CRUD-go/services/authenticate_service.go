@@ -5,7 +5,7 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-func Login(email string, password string) models.User {
+func Login(email string) models.User {
 	o := orm.NewOrm()
 	var user models.User
 

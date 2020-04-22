@@ -1,6 +1,8 @@
 package controllers
 
-import "../models"
+import (
+	"../models"
+)
 import (
 	"../constant"
 	"../models/rest"
@@ -10,11 +12,14 @@ import (
 	"net/http"
 )
 
-type UserControler struct {
+type UserController struct {
 	beego.Controller
 }
 
-func (this *UserControler) RegistUser() {
+func (this *UserController) RegistUser() {
+	/*Get bearer token
+	this.Ctx.Input.Header("Authorization")
+	*/
 	var user models.User
 	json.Unmarshal(this.Ctx.Input.RequestBody, &user)
 	id, err := services.RegistUser(user)
@@ -31,10 +36,10 @@ func (this *UserControler) RegistUser() {
 	this.ServeJSON()
 }
 
-func (this *UserControler) GetUsers() {
+func (this *UserController) GetUsers() {
 
 }
 
-func (this *UserControler) GetUserById() {
+func (this *UserController) GetUserById() {
 
 }
