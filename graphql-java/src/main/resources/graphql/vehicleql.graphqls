@@ -1,0 +1,17 @@
+type User {
+    id: ID!,
+    name: String!,
+    address: String!,
+    email: String!,
+    password: String!
+    role_type: String!
+}
+
+type Query {
+    getAllUsers:[User]
+    getUserById(id: ID):User
+}
+
+type Mutation {
+    saveUser(user: User):Boolean
+}
