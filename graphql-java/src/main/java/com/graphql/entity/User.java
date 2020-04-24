@@ -4,6 +4,7 @@ import com.graphql.enumeration.RoleType;
 import lombok.Data;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ import javax.persistence.UniqueConstraint;
 
 @Data
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"email"}))
+@Entity
 public class User {
     @Column(nullable = false)
     @Id
