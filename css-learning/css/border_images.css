@@ -1,0 +1,7 @@
+.box {
+    width: 200px;
+    height: 200px;
+    border: 15px solid transparent;
+    background: #0b2e13;
+    border-image: url("../image/anh.png");
+}
