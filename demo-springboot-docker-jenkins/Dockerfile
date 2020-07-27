@@ -5,5 +5,5 @@ COPY . /app
 RUN mvn -v
 RUN mvn clean install -DskipTests
 LABEL maintainer=bac93.it@gmail.com
-ADD ./target/entropy-backend-0.0.1.jar entropy-backend.jar
-ENTRYPOINT ["java","-jar","entropy-backend.jar"]
+ADD ./target/demo-springboot-docker-jenkins.jar-0.0.1.jar demo-springboot-docker-jenkins.jar
+ENTRYPOINT ["java","-jar","demo-springboot-docker-jenkins.jar"]
