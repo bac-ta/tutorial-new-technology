@@ -7,9 +7,9 @@ services:
       context: .
       dockerfile: Dockerfile
     expose:
-      - "5555"
+      - "5593"
     ports:
-      - "8080:5555"
+      - "8080:5593"
     restart: always
     depends_on:
       - db # This service depends on mysql. Start that first.
@@ -24,7 +24,7 @@ services:
   db:
     image: mysql:5.7
     ports:
-      - "3307:3306"
+      - "3306:3307"
     restart: always #Always restart when error or stop
     environment:
       MYSQL_DATABASE: demo-springboot-docker-jenkins
