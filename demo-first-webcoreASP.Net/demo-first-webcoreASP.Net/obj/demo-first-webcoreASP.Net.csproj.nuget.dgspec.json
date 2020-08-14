@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/entropy/c#-workspace/tutorial-new-technology/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net.csproj": {}
+  },
+  "projects": {
+    "/home/entropy/c#-workspace/tutorial-new-technology/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/entropy/c#-workspace/tutorial-new-technology/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net.csproj",
+        "projectName": "demo-first-webcoreASP.Net",
+        "projectPath": "/home/entropy/c#-workspace/tutorial-new-technology/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net.csproj",
+        "packagesPath": "/home/entropy/.nuget/packages/",
+        "outputPath": "/home/entropy/c#-workspace/tutorial-new-technology/demo-first-webcoreASP.Net/demo-first-webcoreASP.Net/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/entropy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Components": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0-preview.7.20364.11, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.0.0-alpha1, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

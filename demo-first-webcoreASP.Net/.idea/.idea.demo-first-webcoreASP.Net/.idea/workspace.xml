@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:CRUD-express" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="960c2941-6d62-46dc-b689-f39a69c6d9ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/4B57C086-8352-40AB-8005-061EB4E5620D/86/c43767cc/System.Xml.XPath.XDocument.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/68D43461-E869-422C-9F52-9604D7705021/f1/5d034d8a/Microsoft.Extensions.DependencyInjection.Abstractions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1g4fyR9CnkhhVRa73jpqcz3Dtod" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Demo run" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo-first-webcoreASP.Net" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo-first-webcoreASP.Net" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="960c2941-6d62-46dc-b689-f39a69c6d9ab" name="Default Changelist" comment="" />
+      <created>1597379042594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597379042594</updated>
+      <workItem from="1597379050053" duration="1099000" />
+      <workItem from="1597389254437" duration="7853000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="451" y="211" width="1084" height="858" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597394986475">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="451" y="211" width="1084" height="858" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597394986475" />
+    <state x="833" y="338" width="309" height="491" key="EnvironmentVariablesDialog" timestamp="1597392886989">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="833" y="338" width="309" height="491" key="EnvironmentVariablesDialog/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597392886989" />
+    <state x="776" y="324" width="424" height="493" key="FileChooserDialogImpl" timestamp="1597394984844">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="324" width="424" height="493" key="FileChooserDialogImpl/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597394984844" />
+    <state width="1807" height="290" key="GridCell.Tab.0.bottom" timestamp="1597402279926">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="290" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279926" />
+    <state width="1807" height="290" key="GridCell.Tab.0.center" timestamp="1597402279925">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="290" key="GridCell.Tab.0.center/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279925" />
+    <state width="1807" height="290" key="GridCell.Tab.0.left" timestamp="1597402279925">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="290" key="GridCell.Tab.0.left/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279925" />
+    <state width="1807" height="290" key="GridCell.Tab.0.right" timestamp="1597402279926">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="290" key="GridCell.Tab.0.right/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279926" />
+  </component>
+</project>
