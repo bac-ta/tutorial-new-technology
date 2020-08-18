@@ -37,10 +37,19 @@
     </e>
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="demo-first-webcoreASP.Net" t="IncludeRecursive">
+        <e p="AbstactShape.cs" t="Include" />
+        <e p="AbstactShape.exe" t="Include" />
+        <e p="AdvancedTutorial.cs" t="Include" />
+        <e p="AdvancedTutorial.exe" t="Include" />
         <e p="Component1.razor" t="Include" />
         <e p="Demo.cs" t="Include" />
         <e p="Demo.exe" t="Include" />
         <e p="ExampleJsInterop.cs" t="Include" />
+        <e p="InheritanceApplication.cs" t="Include" />
+        <e p="InheritanceApplication.exe" t="Include" />
+        <e p="InterfaceShape.cs" t="Include" />
+        <e p="Obsolete.cs" t="Include" />
+        <e p="Obsolete.exe" t="Include" />
         <e p="_Imports.razor" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="demo-first-webcoreASP.Net.csproj" t="IncludeRecursive" />

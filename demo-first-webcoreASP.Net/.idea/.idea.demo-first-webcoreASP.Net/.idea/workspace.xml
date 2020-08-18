@@ -41,7 +41,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="960c2941-6d62-46dc-b689-f39a69c6d9ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/AbstactShape.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/AdvancedTutorial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/InheritanceApplication.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/InterfaceShape.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Obsolete.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +75,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Obsolete.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/InheritanceApplication.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/InterfaceShape.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/AbstactShape.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/AdvancedTutorial.cs" />
       </list>
     </option>
   </component>
@@ -72,7 +92,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/AdvancedTutorial.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,10 +100,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
-    <configuration name="Demo run" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" />
+    <configuration name="AdvancedTutorial" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/demo-first-webcoreASP.Net/AdvancedTutorial.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo-first-webcoreASP.Net" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -117,6 +138,10 @@
       <updated>1597379042594</updated>
       <workItem from="1597379050053" duration="1099000" />
       <workItem from="1597389254437" duration="7853000" />
+      <workItem from="1597629310466" duration="6147000" />
+      <workItem from="1597645673496" duration="4078000" />
+      <workItem from="1597717801432" duration="2161000" />
+      <workItem from="1597720485638" duration="1144000" />
     </task>
     <servers />
   </component>
@@ -141,33 +166,37 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="211" width="1084" height="858" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597394986475">
+    <state x="451" y="198" width="1084" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597636048413">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="211" width="1084" height="858" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597394986475" />
+    <state x="451" y="198" width="1084" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597636048413" />
     <state x="833" y="338" width="309" height="491" key="EnvironmentVariablesDialog" timestamp="1597392886989">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="833" y="338" width="309" height="491" key="EnvironmentVariablesDialog/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597392886989" />
-    <state x="776" y="324" width="424" height="493" key="FileChooserDialogImpl" timestamp="1597394984844">
+    <state x="776" y="324" width="424" height="493" key="FileChooserDialogImpl" timestamp="1597636046638">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="324" width="424" height="493" key="FileChooserDialogImpl/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597394984844" />
-    <state width="1807" height="290" key="GridCell.Tab.0.bottom" timestamp="1597402279926">
+    <state x="776" y="324" width="424" height="493" key="FileChooserDialogImpl/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597636046638" />
+    <state width="1807" height="122" key="GridCell.Tab.0.bottom" timestamp="1597639243985">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="290" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279926" />
-    <state width="1807" height="290" key="GridCell.Tab.0.center" timestamp="1597402279925">
+    <state width="1807" height="122" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597639243985" />
+    <state width="1807" height="122" key="GridCell.Tab.0.center" timestamp="1597639243985">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="290" key="GridCell.Tab.0.center/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279925" />
-    <state width="1807" height="290" key="GridCell.Tab.0.left" timestamp="1597402279925">
+    <state width="1807" height="122" key="GridCell.Tab.0.center/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597639243985" />
+    <state width="1807" height="122" key="GridCell.Tab.0.left" timestamp="1597639243984">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="290" key="GridCell.Tab.0.left/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279925" />
-    <state width="1807" height="290" key="GridCell.Tab.0.right" timestamp="1597402279926">
+    <state width="1807" height="122" key="GridCell.Tab.0.left/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597639243984" />
+    <state width="1807" height="122" key="GridCell.Tab.0.right" timestamp="1597639243985">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="290" key="GridCell.Tab.0.right/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597402279926" />
+    <state width="1807" height="122" key="GridCell.Tab.0.right/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597639243985" />
+    <state x="482" y="188" width="1022" height="739" key="SettingsEditor" timestamp="1597720450247">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="188" width="1022" height="739" key="SettingsEditor/67.27.1853.1053/1920.205.1920.1080@67.27.1853.1053" timestamp="1597720450247" />
   </component>
 </project>

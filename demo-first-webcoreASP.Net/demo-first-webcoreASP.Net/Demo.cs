@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace demo_first_webcoreASP.Net
 {
@@ -23,6 +24,12 @@ namespace demo_first_webcoreASP.Net
             Console.WriteLine("Length: {0}", length);
             Console.WriteLine("Width: {0}", width);
             Console.WriteLine("Area: {0}", GetArea());
+            var listDemo = new List<int>();
+            listDemo.Add(12);
+            var map = new Dictionary<string, int>();
+            map["bac"] = 1;
+            map["phuong"] = 2;
+            Console.WriteLine(map["phuong"]);
         }
     }
 
