@@ -45,11 +45,16 @@
         <e p="Demo.cs" t="Include" />
         <e p="Demo.exe" t="Include" />
         <e p="ExampleJsInterop.cs" t="Include" />
+        <e p="IndexClass.cs" t="Include" />
+        <e p="IndexClass.exe" t="Include" />
         <e p="InheritanceApplication.cs" t="Include" />
         <e p="InheritanceApplication.exe" t="Include" />
         <e p="InterfaceShape.cs" t="Include" />
         <e p="Obsolete.cs" t="Include" />
         <e p="Obsolete.exe" t="Include" />
+        <e p="Reflection.cs" t="Include" />
+        <e p="Reflection.exe" t="Include" />
+        <e p="Reflection2.cs" t="Include" />
         <e p="_Imports.razor" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="demo-first-webcoreASP.Net.csproj" t="IncludeRecursive" />

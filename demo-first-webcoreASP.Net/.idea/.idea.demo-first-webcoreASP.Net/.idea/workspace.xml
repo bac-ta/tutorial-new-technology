@@ -41,22 +41,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="960c2941-6d62-46dc-b689-f39a69c6d9ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/AbstactShape.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/AdvancedTutorial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/InheritanceApplication.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/InterfaceShape.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Obsolete.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/IndexClass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Reflection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Reflection2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.demo-first-webcoreASP.Net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/bin/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/RazorDeclaration/demo-first-webcoreASP.Net.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/demo-first-webcoreASP.Net/obj/Debug/netstandard2.0/demo-first-webcoreASP.Net.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +59,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/4B57C086-8352-40AB-8005-061EB4E5620D/86/c43767cc/System.Xml.XPath.XDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/68D43461-E869-422C-9F52-9604D7705021/f1/5d034d8a/Microsoft.Extensions.DependencyInjection.Abstractions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/demo-first-webcoreASP.Net/Demo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DADD22E-0197-42CE-80AA-EFEF99855BE0/f3/71112c72/MemberInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,6 +70,9 @@
         <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/InterfaceShape.cs" />
         <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/AbstactShape.cs" />
         <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/AdvancedTutorial.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Reflection2.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/Reflection.cs" />
+        <option value="$PROJECT_DIR$/demo-first-webcoreASP.Net/IndexClass.cs" />
       </list>
     </option>
   </component>
@@ -141,7 +134,9 @@
       <workItem from="1597629310466" duration="6147000" />
       <workItem from="1597645673496" duration="4078000" />
       <workItem from="1597717801432" duration="2161000" />
-      <workItem from="1597720485638" duration="1144000" />
+      <workItem from="1597720485638" duration="1580000" />
+      <workItem from="1597722099203" duration="2687000" />
+      <workItem from="1597804269351" duration="3582000" />
     </task>
     <servers />
   </component>
