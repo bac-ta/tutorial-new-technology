@@ -5,6 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 </head>
 <body>
 
@@ -246,5 +248,199 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+    <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and
+        data-toggle="dropdown".</p>
+    <div class="dropdown dropright">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu">
+            <h3 class="dropdown-header">Header</h3>
+            <a class="dropdown-item active" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">Link 4</a>
+        </div>
+    </div>
+    <div class="dropdown dropleft">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu">
+            <h3 class="dropdown-header">Header</h3>
+            <a class="dropdown-item active" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">Link 4</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown buttonszfsssssssssssssssssssssssssssssssssss
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+            <h3 class="dropdown-header">Header</h3>
+            <a class="dropdown-item active" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">Link 4</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Demo collapsible</h2>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Demi collasible</button>
+    <div id="demo" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Header
+        </div>
+        <div class="card-link" data-toggle="collaplse">
+            Collapsible group item 1
+        </div>
+        <div id="collapseOne" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                This is collapse link...
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            
+            <a class="collapse card-link" data-toggle="collapse">
+                Collapsible group item 2
+            
+            </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                This is collapse 2...
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <a class="collapse card-link" data-toggle="collapse">
+                Collapsible group item 3
+            </a>
+        
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                This is collapse 3...
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>Nav</h1>
+    <p>Basic horizontal menu</p>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            
+            <a class="nav-link disabled">Disabled</a>
+        </li>
+    
+    </ul>
+    
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            
+            <a class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            
+            <a class="nav-link disabled">Disabled</a>
+        </li>
+    
+    </ul>
+</div>
+<div class="container">
+    <h2>Vertical nav</h2>
+    <p>User class .flex-column class to create a vertical nav</p>
+    <ul class="nav flex-column nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">Link</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    
+    <h2>Pills</h2>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ">Link1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ">Link2</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    
+    <h2>Justified</h2>
+    <p>To justify tabs/pills (equal width), use the .nav-justified class:</p>
+    
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+            <a class="nav-link active">Active</a>  *-**
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ">Link1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ">Link2</a>
+        </li>
+    </ul>
+</div>
+
+
 </body>
 </html>
