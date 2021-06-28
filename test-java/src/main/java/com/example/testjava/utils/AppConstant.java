@@ -10,7 +10,4 @@ package com.example.testjava.utils;
 public class AppConstant {
     public static final int REST_TEMPLATE_CONNECTION_TIMEOUT = 5000;
     public static final int REST_TEMPLATE_READ_TIMEOUT = 5000;
-
-    public static String GOOGLE_CLOUD_STORE_API_ENDPOINT_BASE = "https://storage.googleapis.com/storage/v1/b/%s";
-
 }
