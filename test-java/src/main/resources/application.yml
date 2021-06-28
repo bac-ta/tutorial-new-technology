@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 123456
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+  flyway:
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    enabled: true
+    schemas: postgres
+    locations: classpath:db/migration
+    user: postgres
+    password: 123456
+
+cloud-storage:
+  bucket-name: road_signs
