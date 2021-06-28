@@ -2,10 +2,12 @@ package com.example.testjava.services.impls;
 
 import com.example.testjava.models.entities.RoadSigns;
 import com.example.testjava.services.RoadSignsService;
-import com.example.testjava.utils.AppConstant;
+import com.google.cloud.storage.Blob;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -23,11 +25,14 @@ public class RoadSignsServiceImpl implements RoadSignsService {
 
     @Override
     public List<RoadSigns> fetchRoadSignsFromBucket() {
-        RestTemplate restTemplate = new RestTemplate();
-        final String url = String.format(AppConstant.GOOGLE_CLOUD_STORE_API_ENDPOINT_BASE, bucketName);
-
-
-
+        Storage storage = StorageOptions.getDefaultInstance().getService();
+        Bucket bucket = storage.get(bucketName);
+        if (bucket != null) {
+            for (Blob blob : bucket.list().iterateAll()) {
+                System.out.printf(" - %s\n", blob.getName());
+                System.out.println("   " + blob);
+            }
+        }
 
         return null;
     }

@@ -36,17 +36,23 @@ services:
       ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL: "0"
 
   #Config my test java app
-  test-java-app:
-    image: "test-java-app"
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      cloud-storage.bucket-name: road_signs
-
-    ports:
-      - "8080:8080"
-    restart: always
-    depends_on:
-      - postgres
-      - kafdrop
+#  test-java-app:
+#    image: "test-java-app"
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=123456
+#      - SPRING_JPA_DATABASE=postgresql
+#      - SPRING_JPA_SHOW_SQL=true
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#      - SPRING_JPA_HIBERNATE_NAMING_STRATEGY=org.hibernate.cfg.ImprovedNamingStrategy
+#      - cloud-storage.bucket-name=road_signs
+#    ports:
+#      - "5593:8080"
+#    restart: always
+#    depends_on:
+#      - postgres
+#      - kafdrop
