@@ -15,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -28,6 +29,7 @@ import java.nio.channels.WritableByteChannel;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -43,14 +45,17 @@ import java.util.stream.Collectors;
 @Service
 public class RoadSignsServiceImpl implements RoadSignsService {
     private final RoadSignsRepository roadSignsRepository;
+    private final KafkaTemplate<String, RoadSigns> kafkaTemplate;
+
     @Value("${cloud-storage.bucket-name}")
     private String bucketName;
     @Value("${kafka.topic}")
     private String kafkaTopic;
 
     @Autowired
-    public RoadSignsServiceImpl(RoadSignsRepository roadSignsRepository) {
+    public RoadSignsServiceImpl(RoadSignsRepository roadSignsRepository, KafkaTemplate<String, RoadSigns> kafkaTemplate) {
         this.roadSignsRepository = roadSignsRepository;
+        this.kafkaTemplate = kafkaTemplate;
     }
 
     @SneakyThrows
@@ -116,13 +121,23 @@ public class RoadSignsServiceImpl implements RoadSignsService {
             return new LinkedList<>();
 
         return roadSignsRepository.saveAll(roadSignsDtoList.stream()
-                .map(dto -> new RoadSigns(dto.getName(), dto.getSize(), LocalDateTime.now()))
+                .map(dto -> {
+                    RoadSigns roadSigns = new RoadSigns();
+                    roadSigns.setName(dto.getName());
+                    roadSigns.setSize(dto.getSize());
+                    roadSigns.setUpdateTime(LocalDateTime.now(ZoneOffset.UTC));
+
+                    return roadSigns;
+                })
                 .collect(Collectors.toList()));
     }
 
     @Override
     public void sendKafkaTopic(List<RoadSigns> roadSignsList) {
+        if (roadSignsList.isEmpty())
+            return;
 
+        roadSignsList.forEach(roadSigns -> kafkaTemplate.send(kafkaTopic, roadSigns));
     }
 }
 

@@ -25,6 +25,7 @@ public class RoadSignsJob {
         this.roadSignsService = roadSignsService;
     }
 
+    //    @Scheduled(cron = "0 0/5 * * * *")
     @Scheduled(cron = "* * * * * *")
     private void job() {
         List<RoadSignsDto> roadSignsDtoList = roadSignsService.fetchRoadSignsFromBucket();

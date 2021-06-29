@@ -24,3 +24,4 @@ cloud-storage:
 
 kafka:
   topic: road.signs
+  boostrap-server: localhost:9092
