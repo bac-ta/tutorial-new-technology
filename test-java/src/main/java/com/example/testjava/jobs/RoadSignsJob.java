@@ -32,4 +32,5 @@ public class RoadSignsJob {
         List<RoadSigns> roadSignsList = roadSignsService.saveRoadSignsToDb(roadSignsDtoList);
         roadSignsService.sendKafkaTopic(roadSignsList);
     }
+    
 }

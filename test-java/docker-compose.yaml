@@ -51,11 +51,13 @@ services:
 #      - SPRING_JPA_HIBERNATE_NAMING_STRATEGY=org.hibernate.cfg.ImprovedNamingStrategy
 #      - cloud-storage.bucket-name=road_signs
 #      - kafka.topic=road.signs
-#      - kafka.boostrap-server=localhost:9092
-#      - GOOGLE_APPLICATION_CREDENTIALS=key-google.json
+#      - kafka.group-id=road.signs-group
+#      - kafka.boostrap-server=kafka:29092
 #    ports:
-#      - "5593:8080"
+#      - "5592:8080"
 #    restart: always
 #    depends_on:
 #      - postgres
-#      - kafdrop
+#      - kafka
+#    volumes:
+#    - ~/.config/gcloud:/root/.config/gcloud

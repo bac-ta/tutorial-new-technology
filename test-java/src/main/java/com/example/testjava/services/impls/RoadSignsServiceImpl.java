@@ -30,6 +30,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -125,7 +126,7 @@ public class RoadSignsServiceImpl implements RoadSignsService {
                     RoadSigns roadSigns = new RoadSigns();
                     roadSigns.setName(dto.getName());
                     roadSigns.setSize(dto.getSize());
-                    roadSigns.setUpdateTime(LocalDateTime.now(ZoneOffset.UTC));
+                    roadSigns.setUpdateTime(LocalDateTime.now(ZoneOffset.UTC).truncatedTo(ChronoUnit.SECONDS));
 
                     return roadSigns;
                 })

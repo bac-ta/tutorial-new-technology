@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This class config kafka consumer (just additional more that NOT IMPORTANT in this test project example :) )
+ * This class config kafka consumer (just additional more to test that NOT IMPORTANT in this test project example :) )
  *
  * @author bac-ta
  * @see KafkaProducerConfiguration
@@ -27,13 +27,15 @@ import java.util.Map;
 public class KafkaConsumerConfiguration {
 
     @Value("${kafka.boostrap-server}")
-    private String bootstrapServers;
+    private String kafkaBootstrapServers;
+    @Value("${kafka.group-id}")
+    private String kafkaGroupId;
 
     @Bean
     public ConsumerFactory<String, RoadSigns> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "demo-group-config");
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBootstrapServers);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaGroupId);
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(),
                 new JsonDeserializer<>(RoadSigns.class));
     }
