@@ -4,11 +4,7 @@
 $ mvn clean package -DskipTests=true
 ```
 
-* Step 2: Login your google cloud account to get credentials (you can install "gccloud" if have not yet)
-```
-$ gcloud auth application-default login
-```  
-* Step 3: Run app IN docker:
+* Step 2: Run app IN docker:
 
 ```
 $ docker-compose up --build

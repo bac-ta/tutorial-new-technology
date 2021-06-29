@@ -25,12 +25,12 @@ public class RoadSignsJob {
         this.roadSignsService = roadSignsService;
     }
 
-    //    @Scheduled(cron = "0 0/5 * * * *")
-    @Scheduled(cron = "* * * * * *")
+    //    @Scheduled(cron = "* * * * * *")
+    @Scheduled(cron = "0 0/5 * * * *")
     private void job() {
         List<RoadSignsDto> roadSignsDtoList = roadSignsService.fetchRoadSignsFromBucket();
         List<RoadSigns> roadSignsList = roadSignsService.saveRoadSignsToDb(roadSignsDtoList);
         roadSignsService.sendKafkaTopic(roadSignsList);
     }
-    
+
 }

@@ -5,6 +5,8 @@ import com.example.testjava.models.entities.RoadSigns;
 import com.example.testjava.repositories.RoadSignsRepository;
 import com.example.testjava.services.RoadSignsService;
 import com.example.testjava.utils.AppConstant;
+import com.google.auth.Credentials;
+import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.ReadChannel;
 import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.Bucket;
@@ -14,6 +16,7 @@ import lombok.SneakyThrows;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -22,6 +25,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
@@ -62,7 +66,11 @@ public class RoadSignsServiceImpl implements RoadSignsService {
     @SneakyThrows
     @Override
     public List<RoadSignsDto> fetchRoadSignsFromBucket() {
-        Storage storage = StorageOptions.getDefaultInstance().getService();
+        InputStream inputStream = new ClassPathResource("application_default_credentials.json").getInputStream();
+        Credentials credentials = GoogleCredentials
+                .fromStream(inputStream);
+
+        Storage storage = StorageOptions.newBuilder().setCredentials(credentials).build().getService();
         Bucket bucket = storage.get(bucketName);
         List<RoadSignsDto> roadSignsDtoList = new ArrayList<>();
 
