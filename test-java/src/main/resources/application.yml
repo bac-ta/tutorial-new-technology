@@ -21,3 +21,6 @@ spring:
 
 cloud-storage:
   bucket-name: road_signs
+
+kafka:
+  topic: road.signs

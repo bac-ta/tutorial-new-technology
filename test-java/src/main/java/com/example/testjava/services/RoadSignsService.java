@@ -1,6 +1,6 @@
 package com.example.testjava.services;
 
-import com.example.testjava.models.entities.RoadSigns;
+import com.example.testjava.models.dtos.RoadSignsDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,9 +14,9 @@ import java.util.List;
  */
 @Service
 public interface RoadSignsService {
-    List<RoadSigns> fetchRoadSignsFromBucket();
+    List<RoadSignsDto> fetchRoadSignsFromBucket();
 
-    void saveRoadSignsToDb();
+    void saveRoadSignsToDb(List<RoadSignsDto> roadSignsDtoList);
 
     void sendKafkaTopic();
 }

@@ -3,6 +3,7 @@ package com.example.testjava.models.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldNameConstants;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,6 +26,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@FieldNameConstants
 @IdClass(RoadSignsPrimaryKey.class)
 public class RoadSigns {
     @Id

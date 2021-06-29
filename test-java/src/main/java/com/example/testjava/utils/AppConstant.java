@@ -8,6 +8,7 @@ package com.example.testjava.utils;
  * @since 2021-06-28
  */
 public class AppConstant {
-    public static final int REST_TEMPLATE_CONNECTION_TIMEOUT = 5000;
-    public static final int REST_TEMPLATE_READ_TIMEOUT = 5000;
+    public static String TMP_PATH = "/tmp";
+    public static final long FILE_MAX_ALLOW_SIZE = 1000000;
+    public static final int FILE_BYTE = 64 * 1024;
 }
