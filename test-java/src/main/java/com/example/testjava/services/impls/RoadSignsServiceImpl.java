@@ -29,6 +29,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -110,24 +111,18 @@ public class RoadSignsServiceImpl implements RoadSignsService {
     }
 
     @Override
-    public void saveRoadSignsToDb(List<RoadSignsDto> roadSignsDtoList) {
+    public List<RoadSigns> saveRoadSignsToDb(List<RoadSignsDto> roadSignsDtoList) {
         if (roadSignsDtoList.isEmpty())
-            return;
+            return new LinkedList<>();
 
-        List<RoadSignsDto> roadSignsDtoStoredList = roadSignsRepository.findRoadSignsList(roadSignsDtoList);
-
-        if (!roadSignsDtoStoredList.isEmpty())
-            roadSignsDtoList.retainAll(roadSignsDtoStoredList);
-        //Save to DB
-        if (!roadSignsDtoList.isEmpty()) {
-            List<RoadSigns> roadSignsList = roadSignsDtoList.stream().map(dto -> new RoadSigns(dto.getName(), dto.getSize(), LocalDateTime.now())).collect(Collectors.toList());
-            roadSignsRepository.saveAll(roadSignsList);
-        }
-
+        return roadSignsRepository.saveAll(roadSignsDtoList.stream()
+                .map(dto -> new RoadSigns(dto.getName(), dto.getSize(), LocalDateTime.now()))
+                .collect(Collectors.toList()));
     }
 
     @Override
-    public void sendKafkaTopic() {
+    public void sendKafkaTopic(List<RoadSigns> roadSignsList) {
 
     }
 }
+

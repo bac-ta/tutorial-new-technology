@@ -1,7 +1,6 @@
 package com.example.testjava.repositories;
 
 import com.example.testjava.models.entities.RoadSigns;
-import com.example.testjava.repositories.customs.RoadSignsRepositoryCustom;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +12,5 @@ import org.springframework.stereotype.Repository;
  * @since 2021-06-28
  */
 @Repository
-public interface RoadSignsRepository extends JpaRepository<RoadSigns, String>, RoadSignsRepositoryCustom {
+public interface RoadSignsRepository extends JpaRepository<RoadSigns, String> {
 }

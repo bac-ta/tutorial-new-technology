@@ -1,9 +1,13 @@
 package com.example.testjava.jobs;
 
+import com.example.testjava.models.dtos.RoadSignsDto;
+import com.example.testjava.models.entities.RoadSigns;
 import com.example.testjava.services.RoadSignsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * This class creates scheduling cron job every 5 minutes
@@ -23,6 +27,8 @@ public class RoadSignsJob {
 
     @Scheduled(cron = "* * * * * *")
     private void job() {
-        roadSignsService.fetchRoadSignsFromBucket();
+        List<RoadSignsDto> roadSignsDtoList = roadSignsService.fetchRoadSignsFromBucket();
+        List<RoadSigns> roadSignsList = roadSignsService.saveRoadSignsToDb(roadSignsDtoList);
+        roadSignsService.sendKafkaTopic(roadSignsList);
     }
 }

@@ -1,5 +1,6 @@
 package com.example.testjava.models.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,6 +37,7 @@ public class RoadSigns {
     @Column
     private String size;
     @Column(name = "update_time")
+    @JsonProperty("update_time")
     private LocalDateTime updateTime;
 }
 
