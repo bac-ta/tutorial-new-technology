@@ -1,11 +1,32 @@
-.flex-container{
+.flex-container {
+    background-color: yellow;
+    max-width: 960px;
+    max-height: 1000px;
+    margin: 0 auto;
+    padding: 5px;
     display: flex;
-    background-color: #0c5460;
     flex-direction: column-reverse;
+    flex-wrap: wrap;
 }
-.flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
+
+.item {
+    background: blue;
+    margin: 5px;
+    color: white;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    width: 1000px;
+}
+.item1 {
+    order: 4;
+}
+.item2 {
+    order: 3;
+}
+.item3 {
+    order: 1;
+}
+.item4 {
+    order: 2;
 }
