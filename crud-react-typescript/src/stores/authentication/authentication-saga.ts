@@ -1,4 +1,6 @@
 import authenticationService from "../../services/authentication-service";
+import { call, fork, put, take } from '@redux-saga/core/effects';
+
 
 function* handleLogin(payload: any): any {
     const {dataLogin} = payload;
@@ -12,5 +14,23 @@ function* handleLogin(payload: any): any {
         } else {
         }
     } catch (error) {
+    }
+}
+
+function* handleLogout() {
+    try{
+        authenticationService.removeAccessToken();
+    }
+    catch (e: any){
+        authenticationService.removeAccessToken();
+    }
+}
+
+function* watchLoginFlow() {
+    while(true){
+        const isLoggedIn = Boolean(authenticationService.getAccessToken());
+        if (isLoggedIn){
+
+        }
     }
 }

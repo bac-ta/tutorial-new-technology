@@ -9,6 +9,10 @@ const setAccessToken = (value: string) => {
     localStorage.setItem(ACCESS_TOKEN_KEY, value);
 }
 
+const removeAccessToken = () => {
+    localStorage.removeItem(ACCESS_TOKEN_KEY);
+}
+
 const doLogin = async (username: string, password: string) => {
     let formData = new FormData()
     let data: any = {}
@@ -33,6 +37,7 @@ const doLogin = async (username: string, password: string) => {
 const authenticationService = {
     getAccessToken,
     setAccessToken,
+    removeAccessToken,
     doLogin
 }
 export default authenticationService;
